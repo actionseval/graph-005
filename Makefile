@@ -1,10 +1,13 @@
 .PHONY: docs
 init:
+	python -m pip install dynapyt
 	python -m pip install -r requirements-dev.txt
 test:
+	python -m pip install dynapyt
 	python -m pytest tests
 
 ci:
+	python -m pip install dynapyt
 	python -m pytest tests --junitxml=report.xml
 
 test-readme:
